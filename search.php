@@ -11,14 +11,15 @@ background-color: lightgrey;
 
 $search = $_GET['query'];
 
-$hostname ='130.211.84.105';
-$db_user='jamal';
+
+$hostname ='104.155.54.65';
+$db_user='root';
 $db_pw='cloud123';
-$db='moviedb';
+$db='MovieDB';
 
 
 $conn = new mysqli($hostname, $db_user, $db_pw, $db) or die("could not connect");
-$sql = "SELECT * FROM Films WHERE category ='$search'";
+$sql = "SELECT * FROM name WHERE category ='$search'";
 $result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
